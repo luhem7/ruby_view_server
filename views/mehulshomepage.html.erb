@@ -1,0 +1,13 @@
+<% myName = "Mehul"%>
+
+<h1> <%= myName %>'s Homepage </h1>
+
+<p>Hello, and welcome to <%= myName %>'s Homepage!</p>
+
+<p> The following is a list of the websites that I like to visit: </p>
+
+<ol>
+	<% {:apples => 'red', :grapes => 'green', :bananas => 'yellow'}.each do |fruit, color| %>
+    	<li>I like to eat <%= color %> <%= fruit %> </li>
+  	<% end %>
+</ol>
