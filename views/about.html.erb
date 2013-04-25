@@ -1,0 +1,12 @@
+<% myName = "Mehul"%>
+<% areasLived = ['Hyderabad, India', 'Raleigh, NC, USA'] %>
+
+<h1> About <%= myName %> </h1>
+
+<p>I have lived in the following places: </p>
+<ul>
+	<% areasLived.each do |place| %>
+    	<li><%= place %></li>
+  	<% end %>
+
+</ul>
