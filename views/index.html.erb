@@ -1,11 +1,22 @@
 <h1> Hello</h1>
-<p>
-  The time is now:
-  <%= Time.now %>
-</p>
+
+	<form method='post' action="<%= @request.path %>">
+	    First name: <input type="text" name="first_name" placeholder='first name'/><br />
+	    <input type="radio" name="sex" value="male">Male<br>
+		<input type="radio" name="sex" value="female">Female<br>
+	    <input type="submit" value="Submit" />
+	</form>
+
+	<% if @request.query['first_name'] && !@request.query['first_name'].empty? %>
+	    Hi <%= @request.query['first_name'] %>!
+	    <% @request.query['first_name'] = "" %>
+	<% else %>
+	<% end %> 
+
+	<%= @request.query.inspect %>
 
 <p>
-  My Name is:
-  <%= @name %>
+<!--   My Name is:
+  <%= @name %> -->
 </p>
 
